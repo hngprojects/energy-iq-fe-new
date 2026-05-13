@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Figtree } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { env } from "@/env/client";
+import type { Metadata } from "next"
+import { Geist, Geist_Mono, Figtree } from "next/font/google"
+import "./globals.css"
+import { cn } from "@/lib/utils"
+import { env } from "@/env/client"
 
-const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
+const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" })
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
     template: `%s · ${env.NEXT_PUBLIC_APP_NAME}`,
   },
   description: `${env.NEXT_PUBLIC_APP_NAME} — a Next.js 16 starter.`,
-};
+}
 
-import QueryProvider from "./providers/query-provider";
-import { ThemeProvider } from "./providers/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
+import QueryProvider from "./providers/query-provider"
+import { ThemeProvider } from "./providers/theme-provider"
+import { Toaster } from "@/components/ui/sonner"
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html
@@ -44,7 +44,7 @@ export default function RootLayout({
         geistSans.variable,
         geistMono.variable,
         "font-sans",
-        figtree.variable,
+        figtree.variable
       )}
     >
       <body className="flex min-h-full flex-col">
@@ -60,5 +60,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
