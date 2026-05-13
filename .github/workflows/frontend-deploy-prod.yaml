@@ -6,7 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-
 permissions:
   contents: read
 
@@ -63,7 +62,7 @@ jobs:
         uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.PROD_SERVER_IP }}
-          username: ${{ secrets.SSH_USER }}    # ubuntu
+          username: ${{ secrets.SSH_USER }} # ubuntu
           key: ${{ secrets.SSH_KEY }}
           script: |
             set -e
@@ -83,9 +82,9 @@ jobs:
 
               echo "==> Cleaning up..."
               rm -f /tmp/fe-prod.tar.gz
-            
+
             echo "Production deploy complete"
-      
+
       - name: Health check
         run: |
           sleep 15
