@@ -1,4 +1,4 @@
-import { WorksWith } from "@/components/external/brands";
+/* import { WorksWith } from "@/components/external/brands";
 import { Faq } from "@/components/external/faq";
 import { Hero } from "@/components/external/hero";
 import { PricingSection } from "@/components/external/pricing";
@@ -25,3 +25,4 @@ export default function Home() {
     </div>
   );
 }
+ */

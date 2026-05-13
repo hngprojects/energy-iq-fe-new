@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/external/nav-bar";
+/* import { Navbar } from "@/components/external/nav-bar";
 import { Footer } from "@/components/external/footer";
 
 export default function ExternalLayout({
@@ -14,3 +14,4 @@ export default function ExternalLayout({
     </div>
   );
 }
+ */
